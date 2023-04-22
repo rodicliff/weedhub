@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <style>
+
+            .slider{
+                width: 500px;
+                height: 250px;
+                background: url(images/logo12.png);
+                margin: 100px auto;
+                animation: slide 20s infinite;
+                margin-top: 50px;
+            
+            }
+
+            @keyframes slide{ 
+                10%{
+                    background: url(images/weed11.jpg);
+                }
+                20%{
+                    background: url(images/weed10.jpg);
+                }
+                30%{
+                    background: url(images/weed13.jpg);
+                }
+                40%{
+                    background: url(images/weed14.jpg);
+                }
+
+                50%{
+                    background: url(images/weed15.jpg);
+                }
+                60%{
+                    background: url(images/weed16.jpg);
+                }
+                70%{
+                    background: url(images/weed2.jpg);
+                }
+                90%{
+                    background: url(images/weed1.jpg);
+                } 
+
+                90%{
+                    background: url(images/weed17.jpg);
+                }
+                100%{
+                    background: url(images/weed18.jpg);
+                }
+            }
+
+        .header{
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            font-weight: bold;
+            text-align: center;
+            background: white;
+            background-size: cover;
+            transition: 0.3s;   
+        }
+
+        .offset{
+            margin-top: 0;
+            padding-top: 270px;
+            text-align: center;
+            transition: 2s;
+            font-size: 15px;
+        }
+
+        ul{
+            text-align: center;
+        
+        }
+
+        nav{
+            width: 100%;
+            height: 50px;
+            background: rgba(0,0,0,.8);
+            border-top: 1px solid rgba(255,255,255,.2);
+            border-bottom: 1px solid rgba(255,255,255,.2);
+            position: static;
+            top: 50px;
+            text-align: center;
+        }
+
+
+        
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: green;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;                                           
+        }
+
+        button{
+            color: green;
+            box-shadow: 2px 2px blue;
+            font-size: 10px;
+            background-color: green;
+        }
+
+            
+        button{
+            border-radius: 50%;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            align-items: center;
+            height: 10px;
+            margin-top: 10px;
+                    
+        }
+
+        /* fieldset and legend */
+        fieldset{
+            margin: 2px 0;
+            padding: 1px 2px;
+            border: solid 1px green;
+            border-radius: 1px;
+            min-width: 200px;
+            color: wheat;
+            size: 50px;
+            background: url(images/logo12.png);
+                    
+        }
+
+                
+
+        /* labels */
+        label{
+            display: block;
+            margin-top: 1px;
+        }
+
+        legend{
+            font-size: 3px;
+            padding: 0;
+            color: orange;
+        }
+
+                .check label{
+                    margin-top: 0;
+                }
+
+                label:first-of-type {
+                    margin-top: 0;
+                }
+
+                /*Inputs and textarea */
+                input{
+                    padding: .2cm;
+                    border: solid 1px green;
+                }
+
+                input[type="email"], input[type="text"]{
+                    width: 5cm;
+                }
+
+                textarea{
+                    min-height: 2cm;
+                    min-width: 14%;
+                    padding: 5px;
+                    border: solid 1px green;
+                }
+
+                /* radio buttons and checkboxes */
+                .checks{
+                    margin-bottom: 1cm;
+                }
+
+                .checks p{
+                    margin-bottom: 0;
+                }
+                
+                input[type="checkbox"] * label, input[type="radio"] * label {
+                    display: inline-block;
+                    padding-top: 0;
+                    margin-top: 0;
+                }
+
+                input[type="radio"] {
+                    margin-left: 1.5px;
+                    margin-right: 50px;
+                    float: right;
+                }
+
+
+                /* submit button */
+                input[type="submit"] {
+                    padding: .1cm 1cm;
+                    border-radius: 6px;
+                    background-color: green;
+                    color: white;
+                    font-family: 'lato, sans-serif';
+                    font-size: 15px;
+                }
+
+                /* large screen rules */
+                 @media  screen and (min-width: 430px) {}
+                  legend {
+                    font-size: 1.75cm;
+                  }
+
+                  fieldset{
+                    width: 40%;
+                    min-width: 15px; 
+                    margin: auto; 
+                  }
+
+                  .checks label {
+                    display: inline-block;
+                    padding-top: 5px;
+                    margin-top: 0;
+                    margin-right: .5px;
+                  }
+
+            
+            h2{
+                background-image: url(images/logo12.png);
+                color: whitesmoke;
+                background-size: cover;
+                font-size: 50px;
+            }
+                
+
+            h3{
+                color: green;
+                margin-bottom: 30px;
+                font-size: 30px;
+            }
+
+            h4{
+                background: url(images/logo8.png);
+                color: whitesmoke;
+                background-size: cover;
+                font-size: 25px;
+                
+            }
+
+            h5{
+                background-image: url(images/logo7.png);
+                background-size: cover;
+                color: whitesmoke;
+                font-size: 25px;
+            }
+
+            h6{
+                font-size: 15px;
+                margin-top: 20px;
+                color: green;
+                font-size: 20px;
+            }
+
+            span{
+                font-size: 50px;
+                color: green;
+                text-shadow: 2px 2px;
+            }  *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Inter', sans-serif;
+                
+            }
+
+            p{
+                word-break: break-all;
+                color: black;
+                margin-bottom: 20px;
+                font-size: 25px;
+            }
+
+            .container{
+                padding: 30px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 90px;
+            }
+
+            .card{
+                box-shadow: 2px 2px 8px blue;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .card-body{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-header img{
+                width: 200px;
+            }
+
+            .card-body h1{
+                font-size: 10px;
+                color: orange;
+                margin-top: 20px;
+            }
+
+            .card-body .rate{
+                width: 80px;
+                margin: 5px 0;
+            } 
+
+            .card-body .price{
+                font-size: 20px;
+                color: orange;
+                margin-top: 1px;
+            }
+
+            .card-body button{
+                border: 0;
+                padding: 20px 0;
+                border-radius: 5px;
+                background: orange;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 900px) {}
+                .container{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+
+
+        
+
+
+            
+        
+        </style>
+
+        <div class="header">
+
+            <img src="images/logo1.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 100px;"> 
+                
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">TALK WITH US</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">x</span>
+                <p>WhatsApp us on (237) 650307246</p>
+
+                <section>
+                    <div class="slider"></div>
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend></legend>
+    
+                            <label for="fullname">your name:</label>
+                            <input type="text" name="fullname" id="fullname">
+                
+                            <label for="email">email:</label>
+                            <input type="email" name="email" id="email">
+                
+                            <label for="phone">phone:</label>
+                            <input type="tel" name="phone" id="phone">
+    
+                            <label for="msg">your message:</label>
+                            <textarea name="msg" id="msg"></textarea>
+    
+                            <div class="check">
+                                <input type="checkbox" name="copyEmail"
+                                id="coppyEmail">
+                                <label for="copyEmail">send copy to my email</label>
+                           </div>
+    
+                            <div class="check">
+                                <p>prefer method of contact:</p>
+    
+                                <input type="radio" name="contact" id="contactEmail"
+                                value="email">
+                                <label for="contactEmail">Email</label>
+    
+                                <input type="radio" name="contact"
+                                id="contactTel" value="phone">
+                                <label for="contactTel">phone</label>
+    
+                                <input type="radio" name="contact"
+                                id="contactText" value="text">
+                                <label for="contactText">text message</label>
+    
+                            </div>
+                            <input type="submit" id="submit" value="contact us">
+                        </fieldset>
+                    </form>
+                </section>
+
+                <img src="images/logo4.png"  alt="put" style="width:  200px; margin: 1px auto;
+                display: block;">
+
+            </div>
+
+        </div>
+        </div>
+
+        <div class="offset">
+
+            <h2 align="center">ELEGANT <br><span>CANNABIS</span><br>HUB <br>Cannabis (often called marijuana) comes from the 
+                cannabis plan. it contains the active ingredient delta-9 
+                tetraHydrocannabis (THC), which affects brain function. the flower and 
+                leaves of the cannabis plan are dreid, then smoked or eaten for the 
+                psychoactive effects of THC, which can alter percention and mood.
+            </h2>1
+
+          
+            
+
+            <script type="text/javascript">
+
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+               // When the user clicks on the button, open the modal 
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            
+            </script>
+
+            <img src="images/logo2.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block;">
+
+            <h3 align="center">HEALTH BENEFITS OF SMOKING CANNABIS</h3>
+
+            <h3 align="center">RELIEF OF CHRONIC PAIN</h3>
+
+            <p align="center">there are hundreds of chemical <br>compounds in cannabis, many of which
+                are cannabinoids. cannabinoids have<br> been liked to providing relief of
+                chronic pain due to their chemical<br> makeup. which is why cannabis'by-product such
+                as medical cannabis is<br> commonly used for chronil pain relief.
+            </p>
+
+            <img src="images/logo2.png"  alt="put" style="width:  70px; margin: 1px auto;
+            display: block;">
+
+            <h3 align="center">IMPROVES LUNG CAPACITY</h3>
+
+            <p align="center">unlike smoking cigarettes, when smoking<br> cannabis
+                in the form of cannabis your<br> lungs aren't harmed. in fact a study
+                found that cannabis actually<br> helps increase the capacity of the lungs
+                rather than cause any harm to it.
+            </p>
+
+            <img src="images/logo2.png"  alt="put" style="width:  70px; margin: 1px auto;
+            display: block;">
+
+            <h3 align="center">HELP LOSE WEIGHT</h3>
+
+            <p align="center">if you look arount, you'll notice<br> that the avid cannabis
+                user is usually not overweight.<br> that is becouse cannabis is 
+                linked to aiding your body in <br>regulating insulin while managing caloric
+                intake efficiently.
+            </p>
+
+            <img src="images/logo2.png"  alt="put" style="width:  70px; margin: 1px auto;
+            display: block;">
+
+            <h3 align="center">HELPS TREAT DEPRESSION</h3>
+
+            <p align="center">depression is widespread wthout most<br> people
+                even knowing they have it. <br>The endocannabinoid compounds in 
+                cannabis can help in stabilising<br> moods which can ease depression.
+            </p>
+
+            <img src="images/logo2.png"  alt="put" style="width:  70px; margin: 1px auto;
+            display: block;">
+
+            <h3 align="center">TREATMENT FOR GLAUCOMA</h3>
+
+            <p align="center">Glaucoma leads to additional pressure on the <br>eyeball
+                which is painfull for individuals <br>with the disorder. cannabis can help
+                reduce the pressure<br> applied on the eyball providing some
+                temporary <br>relief to individuals with<br> glaucoma.
+            </p>
+
+            <img src="images/logo2.png"  alt="put" style="width:  70px; margin: 1px auto;
+            display: block;">
+
+            <h3 align="center">ALLEVIATE ANXIETY</h3>
+
+            <p align="center">While cannabis is commonly known to couse <br>anxiaty,
+                there is a<br> way around that. taken in monitored <br>dosage and in the 
+                proper way, cannabis can help alleviate<br> anxiety and calm useres down.
+            </p>
+
+            <img src="images/logo4.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block;">
+
+            <h4 align="center"> NORTHEN LIGHTS<br> without a doubt, northern lights 
+              is one of the best cannabis strains for pain, and insomnia.<br>
+              ACAPULCO GOLD<br> acapulco gold is a rare sativa marijuana straim. it's 
+              noted for its euphoria-inducing, energizing effect. it's said to reduce fatigue
+              ,stress, pain, and even nausea. <br>BLUE DREAM<br> 
+              blue dream is relaxing and soothing, but it isn't a total sedative.
+              this makes it perffect  for easing pain, cramps, or inflammation for when 
+              you can't afford to fall asleep.<br>PURPLE KUSH<br> purple kush is 
+              great for inducing a state of bliss so that you feel relaxed, happy, and 
+              sleepy. it's often used for reducing pain and muscle spasms.
+              it's sedating effect means it can be used to reduce insomnia.<br>BUBBA KUSH<br> 
+              bubba kush is a relaxing, sleep-inducing strain. it's perfect for helping 
+              you fight insomnia and get some shut-eye. it also offers pain-reducing, stress-relieving 
+              result.
+
+            </h4>
+             <img src="images/logo9.png"  alt="put" style="width:  450px; margin: 1px auto;
+            display: block; height: 200px;">
+
+            <h3 align="center">VIEW RECENTLY MADE CANNABIS</h3>
+
+            <img src="images/logo4.png"  alt="put" style="width:  300px; margin: 1px auto;
+            display: block;">
+
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/logo10.png" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed1.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed3.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed4.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed7.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed16.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed7.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB </p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed8.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+            </div>
+
+            <h5 align="center">WHAT YOU SHOULD KNOW ABOUT CANNABIS<br>
+               There's a lot of science behind understanding cannabis, but we'll do our best 
+               to simplify it: Cannabis is made up of more than 120 components, which are known 
+               as cannabinoid. Cannabidiol {CBD} and tetraHydrocannabinol {THC}, are the two most
+               well-known and researched cannabinoids. THC is responsible for the high that
+               many people associate with cannabis, while CBD is a non-intoxicating,
+               non-euphoric component, which you may have seen in the form of oils, gummies,
+               drinks and other products for medical purposes.<br> 1) LOWERING BLOOD PRESSURE<br>
+               a study conducted by JCI insight in 2017 found that CBD lowered the blood pressure
+               of human participants. it reduced their resting blood pressure as well as their blood pressure
+               after stress test including mental arithmetic, isometric exercise, and the cold
+               pressor test.<br>2) REDUCING INFLAMATION<br> CBD has been proven to help reduce 
+               inflammation and the neuropathic pain it can cause according to a study by the 
+               Rockefeller institute of medical Research.
+            </h5>
+
+            <img src="images/logo4.png"  alt="put" style="width:  450px; margin: 1px auto;
+            display: block; height: 200px;">
+
+            <h3 align="center">CANNABIS HELPS FIGHT CANCER</h3>
+
+            <h6 align="center">not only has CBD been used to<br> help alleviate
+                the effects of chemotherapy, but studies have<br> also found it can prevent
+                cell growth and induce cell<br> death in cervical cancer cell lines and it has 
+                numerouse anti-cancer effects that can help<br> prevent a variety of cancers, treat 
+                tumors, and benefit the immune system.
+            </h6>
+
+            <img src="images/logo2.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 200px;">
+
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed17.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed1.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed20.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed21.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed22.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed23.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed24.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed25.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed26.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/weed27.jpg" alt="door image">
+
+                    </div>
+                    <div class="card-body">
+                        <h1>CANNABIS</h1>
+                        <img src="images/rate.png" class="rate icon">
+                        <p>ELEGANT CANNABIS HUB</p>
+                        <h2 class="price">$200</h2>
+                        <button type="button">add to card</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 align="center">THE BEST TIME TO TAKE CANNABIS</h3>
+
+            <h6 align="center">a person may wish to take CBD in the <br>morning if 
+                they want to feel mare awake and alert or to<br> help manage their anxiety.
+                throughout the day, a person may wish<br> to use CBD to treat certain epilepsy 
+                seizures or migraine. if a person has<br> poor sleep, they may wish to use CBD at 
+                night to improve their sleep. 
+            </h6>
+
+            <img src="images/logo2.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 200px;">
+
+            <img src="images/weed30.png"  alt="put" style="width:  200px; height: 200px; float: left;">
+
+            <img src="images/weed31.png"  alt="put" style="width:  200px; height: 200px; float: right;">
+
+            <img src="images/logo2.png"  alt="put" style="width:  100px; margin: 1px auto;
+            display: block; height: 100px;">
+
+            <img src="images/weed32.png"  alt="put" style="width:  200px; height: 200px; float: left;">
+
+            <img src="images/weed33.png"  alt="put" style="width:  200px; height: 200px; float: right;">
+
+            
+            <img src="images/logo2.png"  alt="put" style="width:  100px; margin: 1px auto;
+            display: block; height: 100px;">
+
+            <img src="images/weed34.png"  alt="put" style="width:  200px; height: 200px; float: left;">
+
+            <img src="images/weed5.jpg"  alt="put" style="width:  200px; height: 200px; float: right;">
+
+            <img src="images/logo2.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 200px;">
+
+            <h3 align="center">PAYMENT METHODS</h3>
+
+
+            <img src="images/cash app.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 100px;">
+
+            <h3 align="center">CASH APP</h3>
+
+            <h6 align="center"> after setting up an acount, you'll link an existing bank account to your
+                cash app account. Once a payment <br>source is connected, you can send or receive money
+                through the mobile app.
+                Users can enter a dollar<br> amount from the green payment tab and tap
+                "pay" to create a payment.
+            </h6>
+
+            <img src="images/zelle.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 100px;">
+
+            <h3 align="center">ZELLE</h3>
+
+            <h6 align="center">Zelle sends the recipient a text or email indicating there's a payment
+                waing for them, along with a link to<br> accept it. if the recipient's back
+                is a participating partner, the recipient simply needs to rgister for the 
+                service through their bank's website or mobile app with an email address or phone
+                number
+            </h6>
+
+            <img src="images/paypal.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 100px;">
+
+            <h3 align="center">PAYPAL</h3>
+
+            <h6 align="center"> paypal works as an intermidiary between you and a bank. A user adds a 
+               bank account or credit/debit card to the paypal system, and whenever they're
+               making an online payment they can select which account to debit.
+               All transactions are processed through PayPal, insteaad of your bank.
+            </h6>
+
+            <img src="images/apple pay.png"  alt="put" style="width:  200px; margin: 1px auto;
+            display: block; height: 100px;">
+            
+            <h3 align="center">APPLE PAY</h3>
+
+            <h6 align="center">at the payment terminal in the store, present your rewards card 
+                by holding iPhone near the contactless <br>reader. Apple pay then switches
+                to your default payment card to pay for the purchase. 
+                in some <br>stores, you can apply your reward card and payment card in 
+                one step.
+            </h6>
+            </offset>
+            
+        </div> 
+
+
+    </body>
+</html>
